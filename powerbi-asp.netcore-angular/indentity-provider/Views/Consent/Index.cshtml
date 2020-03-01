@@ -1,4 +1,4 @@
-@model ConsentViewModel
+﻿@model ConsentViewModel
 
 <div class="page-consent">
     <div class="row page-header">
@@ -16,13 +16,13 @@
 
     <div class="row">
         <div class="col-sm-8">
-            <partial name="_ValidationSummary" />
+            @Html.Partial("_ValidationSummary")
 
             <form asp-action="Index" class="consent-form">
                 <input type="hidden" asp-for="ReturnUrl" />
 
                 <div>Uncheck the permissions you do not wish to grant.</div>
-
+                
                 @if (Model.IdentityScopes.Any())
                 {
                     <div class="panel panel-default consent-buttons">
@@ -33,7 +33,7 @@
                         <ul class="list-group">
                             @foreach (var scope in Model.IdentityScopes)
                             {
-                                <partial name="_ScopeListItem" model="@scope" />
+                                @Html.Partial("_ScopeListItem", scope)
                             }
                         </ul>
                     </div>
@@ -49,7 +49,7 @@
                         <ul class="list-group">
                             @foreach (var scope in Model.ResourceScopes)
                             {
-                                <partial name="_ScopeListItem" model="scope" />
+                                @Html.Partial("_ScopeListItem", scope)
                             }
                         </ul>
                     </div>

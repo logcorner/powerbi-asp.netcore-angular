@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,7 +16,7 @@ namespace web_api_core.Controllers
             _orderRepository = orderRepository;
         }
 
-        // [Authorize]
+        [Authorize]
         [HttpGet()]
         public ActionResult<List<Order>> Index()
         {
