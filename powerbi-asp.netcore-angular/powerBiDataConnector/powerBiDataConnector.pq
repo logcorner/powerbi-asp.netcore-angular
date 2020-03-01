@@ -20,9 +20,11 @@ scopes =     "order_api.orders";
 [DataSource.Kind="powerBiDataConnector", Publish="powerBiDataConnector.Publish"]
 shared powerBiDataConnector.Contents = (url as text) =>
     let
-       source = Json.Document(Web.Contents(url))
+       source = Json.Document(Web.Contents(url)),
+       #"Converted to Table" = Table.FromList(source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+       #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"oerderId", "productName", "unitPrice", "quantity", "customerId"}, {"oerderId", "productName", "unitPrice", "quantity", "customerId"})
     in
-        source;
+       #"Expanded Column1";
 
 // Data Source Kind description
 powerBiDataConnector = [
