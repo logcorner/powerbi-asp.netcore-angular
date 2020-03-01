@@ -24,7 +24,7 @@ namespace web_api_core
                 .AddIdentityServerAuthentication(options =>
                 {
                     options.Authority = "http://localhost:5000";
-                    options.ApiName = "wiredbrain_api";
+                    options.ApiName = "order_api";
                     options.ApiSecret = "apisecret";
                 });
 
