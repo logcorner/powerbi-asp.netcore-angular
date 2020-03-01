@@ -67,6 +67,12 @@
     <Compile Include="resources.resx">
       <SubType>Code</SubType>
     </Compile>
+    <Content Include="client_id.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="client_secret.txt">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="power_bi_connector.query.pq">
       <SubType>Code</SubType>
     </Content>
