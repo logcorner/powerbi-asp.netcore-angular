@@ -16,6 +16,8 @@ namespace web_identity_provider
                     // Disable OIDC endpoints
                     options.Endpoints.EnableCheckSessionEndpoint = false;
                     options.Endpoints.EnableEndSessionEndpoint = false;
+                    options.PublicOrigin = "https://logcorner-identity-provider.azurewebsites.net";
+                    options.IssuerUri= "https://logcorner-identity-provider.azurewebsites.net";
                 })
                 .AddTestUsers(TestUsers.Users)
                 .AddInMemoryIdentityResources(Config.GetIdentityScopes())
