@@ -4,8 +4,8 @@ section powerBiDataConnector;
 client_id = Text.FromBinary(Extension.Contents("client_id.txt"));
 client_secret = Text.FromBinary(Extension.Contents("client_secret.txt"));
 redirect_uri = "https://oauth.powerbi.com/views/oauthredirect.html";
-token_uri = "http://localhost:5000/connect/token";
-authorize_uri = "http://localhost:5000/connect/authorize";
+token_uri = "https://logcorner-identity-provider.azurewebsites.net/connect/token";
+authorize_uri = "https://logcorner-identity-provider.azurewebsites.net/connect/authorize";
 logout_uri = "https://login.microsoftonline.com/logout.srf";
 
 
