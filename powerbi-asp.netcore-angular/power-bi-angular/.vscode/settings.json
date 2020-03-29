@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/023b2039-5c23-44b8-844e-c002f8ed431d/resourceGroups/power-bi-workshop-win/providers/Microsoft.Web/sites/angular-power-bi-workshop",
+    "appService.deploySubpath": ""
+}

@@ -1,0 +1,17 @@
+   
+
+    <div class="container body-content">
+  <h2>Available reports </h2>
+  <ul class="list-group list-group-horizontal">
+    <li  class="list-group-item" *ngFor ="let report of myReports">
+      <button type="button" class="btn btn-warning"
+    (click)="embedReport(report.id,report.workspaceId)" >{{report.name }} </button> 
+    
+    </li>
+  </ul>
+  <div class="content" role="main">
+    <div style="width:100%; height: 600px;" id="reportContainer">
+      </div>
+    </div>
+   </div>
+  

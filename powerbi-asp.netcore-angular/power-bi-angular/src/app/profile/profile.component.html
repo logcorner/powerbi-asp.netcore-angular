@@ -1,0 +1,37 @@
+ <div class="container">
+    <div class="row">
+        <div  class="col-md-8">
+          <h3>user infos claims sent from the token server!</h3>
+            <table class="table small">
+                <thead>
+                  <tr>
+                    <th scope="col">issuer</th>
+                    <th scope="col">clientId</th>
+                    <th scope="col">givenName</th>  
+                    <th scope="col">familyName</th>  
+                    <th scope="col">email</th>  
+                    <th scope="col">accessLevel</th> 
+                    <th scope="col">permission</th> 
+                    <th scope="col">businessUnit</th>  
+                    <th scope="col">scope</th>  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr >
+                    <th scope="row">{{claim.iss}}</th>
+                    <td>{{claim.client_id}}</td>
+                    <td>{{claim.given_name}}</td>  
+                    <td>{{claim.family_name}}</td>                   
+                    <td>{{claim.email}}</td> 
+                    <td>{{claim.accessLevel}}</td>    
+                    <td>{{claim.permissions}}</td>  
+                    <td>{{claim.businessUnit}}</td>  
+                    <td>{{claim.scope}}</td>  
+                  </tr>                 
+                </tbody>
+              </table>            
+        </div>
+    </div>
+    
+</div>
+ 
